@@ -1,0 +1,41 @@
+version: '3'
+services:
+  claimantportal-web:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "256M"
+    image: iusdev.azurecr.io/ius.claimantportal.web:latest
+    volumes:
+      - ./appsettings/:/data/appsettings
+    ports:
+      - 44350:80
+    env_file:
+      - .env
+  claimantportal-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "256M"
+    image: iusdev.azurecr.io/ius.claimantportal.service:latest
+    volumes:
+      - ./appsettings/:/data/appsettings
+    ports:
+      - 44349:80
+    env_file:
+      - .env
+  claimantportalapi-gateway:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "256M"
+    image: iusdev.azurecr.io/ius.claimantportal.web:latest
+    volumes:
+      - ./appsettings/:/data/appsettings
+    ports:
+      - 44315:80
+    env_file:
+      - .env

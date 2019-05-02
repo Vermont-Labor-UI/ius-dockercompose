@@ -1,0 +1,255 @@
+version: '3'
+services:
+  claimantportal-web:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "256M"
+    image: iusdev.azurecr.io/ius.claimantportal.web:latest
+    volumes:
+      - ./appsettings/:/data/appsettings
+    ports:
+      - 44350:80
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 1m30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    env_file:
+      - .env
+  accountingmanagement-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/accountingmanagement-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  adjudicationmanagement-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/adjudicationmanagement-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  adminmanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/adminmanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  appealsmanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/appealsmanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  bankcardmanagement-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/bankcardmanagement-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  certificationmanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/certificationmanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  claimantmanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/claimantmanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  claimemployermanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/claimemployermanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  claimmanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/claimmanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  collectionmanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/collectionmanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  directdepositmanagement-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/directdepositmanagement-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  iconmanagement-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/iconmanagement-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  issuemanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/issuemanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  monetary-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/monetary-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  notemanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/notemanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  paymentmanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/paymentmanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  resea-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/resea-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env
+  worksearchmanagement-vt-service:
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          memory: "512M"
+    image: iusdev.azurecr.io/worksearchmanagement-vt-service:latest
+    volumes:
+      - ./appsettings/:/data/AppSettings
+    ports:
+      - 443XX:80
+    env_file:
+      - .env

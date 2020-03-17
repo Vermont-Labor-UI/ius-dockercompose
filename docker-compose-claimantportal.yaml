@@ -6,7 +6,7 @@ services:
       resources:
         limits:
           memory: "256M"
-    image: iusdev.azurecr.io/ius.claimantportal.web:latest
+    image: vtiusdev.azurecr.io/ius.claimantportal.web:latest
     volumes:
       - ./appsettings/:/data/appsettings
     ports:
@@ -19,7 +19,7 @@ services:
       resources:
         limits:
           memory: "256M"
-    image: iusdev.azurecr.io/ius.claimantportal.service:latest
+    image: vtiusdev.azurecr.io/ius.claimantportal.service:latest
     volumes:
       - ./appsettings/:/data/appsettings
     ports:
@@ -32,7 +32,7 @@ services:
       resources:
         limits:
           memory: "256M"
-    image: iusdev.azurecr.io/ius.claimantportal.web:latest
+    image: vtiusdev.azurecr.io/ius.claimantportal.web:latest
     volumes:
       - ./appsettings/:/data/appsettings
     ports:

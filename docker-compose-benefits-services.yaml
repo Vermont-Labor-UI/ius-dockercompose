@@ -6,7 +6,7 @@ services:
       resources:
         limits:
           memory: "256M"
-    image: iusdev.azurecr.io/ius.claimantportal.web:latest
+    image: vtiusdev.azurecr.io/ius.claimantportal.web:latest
     volumes:
       - ./appsettings/:/data/appsettings
     ports:
@@ -25,7 +25,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/accountingmanagement-service:latest
+    image: vtiusdev.azurecr.io/accountingmanagement-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -38,7 +38,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/adjudicationmanagement-service:latest
+    image: vtiusdev.azurecr.io/adjudicationmanagement-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -51,7 +51,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/adminmanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/adminmanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -64,7 +64,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/appealsmanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/appealsmanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -77,7 +77,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/bankcardmanagement-service:latest
+    image: vtiusdev.azurecr.io/bankcardmanagement-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -90,7 +90,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/certificationmanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/certificationmanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -103,7 +103,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/claimantmanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/claimantmanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -116,7 +116,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/claimemployermanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/claimemployermanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -129,7 +129,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/claimmanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/claimmanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -142,7 +142,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/collectionmanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/collectionmanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -155,7 +155,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/directdepositmanagement-service:latest
+    image: vtiusdev.azurecr.io/directdepositmanagement-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -168,7 +168,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/iconmanagement-service:latest
+    image: vtiusdev.azurecr.io/iconmanagement-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -181,7 +181,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/issuemanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/issuemanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -194,7 +194,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/monetary-vt-service:latest
+    image: vtiusdev.azurecr.io/monetary-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -207,7 +207,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/notemanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/notemanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -220,7 +220,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/paymentmanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/paymentmanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -233,7 +233,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/resea-vt-service:latest
+    image: vtiusdev.azurecr.io/resea-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
@@ -246,7 +246,7 @@ services:
       resources:
         limits:
           memory: "512M"
-    image: iusdev.azurecr.io/worksearchmanagement-vt-service:latest
+    image: vtiusdev.azurecr.io/worksearchmanagement-vt-service:latest
     volumes:
       - ./appsettings/:/data/AppSettings
     ports:
